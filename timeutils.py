@@ -34,5 +34,10 @@ def unix_timestamp(value):
     :return: Unix timestamp.
     :rtype: int
 
+    :raises ValueError: If passed date is earlier than 1970-01-01.
+
     """
-    return calendar.timegm(value.utctimetuple())
+    timestamp = calendar.timegm(value.utctimetuple())
+    if timestamp < 0:
+        raise ValueError("Date can't be earlier than 1970-01-01 ({0})".format(value))
+    return timestamp
