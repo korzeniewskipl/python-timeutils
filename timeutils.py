@@ -1,6 +1,10 @@
 """Timeutils."""
 
 import calendar
+import datetime
+import pytz
+
+epoch = pytz.utc.localize(datetime.datetime(1970, 1, 1))
 
 
 def unix_timestamp(value):
