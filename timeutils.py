@@ -4,11 +4,11 @@ import calendar
 import datetime
 import pytz
 
-epoch = pytz.utc.localize(datetime.datetime(1970, 1, 1))
+unix_epoch = pytz.utc.localize(datetime.datetime(1970, 1, 1))
 
 
 def unix_timestamp(value):
-    """Return UNIX timestamp for the given ``datetime.datetime``.
+    """Return Unix timestamp for the given ``datetime.datetime``.
 
     Examples:
         >>> import datetime
@@ -31,7 +31,7 @@ def unix_timestamp(value):
 
     :param value: ``datetime.datetime`` object.
 
-    :return: UNIX timestamp.
+    :return: Unix timestamp.
     :rtype: int
 
     """
